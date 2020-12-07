@@ -1,0 +1,121 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: OpenSans-ExtraBold;
+  src: url(../fonts/OpenSans-ExtraBold.ttf);
+}
+@font-face {
+  font-family: OpenSans-BoldItalic;
+  src: url(../fonts/OpenSans-BoldItalic.ttf);
+}
+@font-face {
+  font-family: OpenSans-Italic;
+  src: url(../fonts/OpenSans-Italic.ttf);
+}
+body {
+  margin: 0;
+}
+body .head {
+  margin: 20px 4% 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .head .navigate {
+  display: flex;
+}
+body .head .navigate .navigate__list {
+  list-style: none;
+  display: flex;
+  color: #54524f;
+  font-family: OpenSans-Bold;
+  letter-spacing: 3px;
+}
+body .head .navigate .navigate__list li {
+  margin-right: 60px;
+}
+body .head .navigate .search {
+  background-color: #c3bfbc;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  border-radius: 25px;
+  align-self: center;
+}
+body .head .navigate .search .search__text-field {
+  outline: none;
+  border: 0;
+  background-color: #c3bfbc;
+  color: white;
+  font-family: OpenSans;
+  width: 120px;
+}
+body .head .navigate .search .search__icon {
+  padding-right: 20px;
+}
+body .first-block {
+  position: relative;
+}
+body .first-block .top-shape {
+  position: absolute;
+  top: -120px;
+  z-index: -1;
+  width: 100%;
+}
+body .first-block .background {
+  position: absolute;
+  width: 100%;
+  z-index: -2;
+}
+body .first-block .background__title {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 4%;
+  right: 55%;
+}
+body .first-block .background__title .background__title-maintext {
+  font-family: OpenSans-ExtraBold;
+  color: #deb37e;
+  font-size: 120px;
+  text-shadow: 3px -5px 5px #ceccc8;
+  margin: 30% 0 0 0;
+}
+body .first-block .background__title .background__title-under-main {
+  font-family: OpenSans-BoldItalic;
+  color: #54524f;
+  letter-spacing: 3px;
+  font-size: 36px;
+}
+body .first-block .background__title .background__title-button {
+  width: max-content;
+  font-size: 36px;
+  font-family: OpenSans-ExtraBold;
+  background-color: #fefefd;
+  border-radius: 25px;
+  margin-top: 5%;
+  border: 0;
+  text-decoration: none;
+  padding: 6px 50px;
+  color: #776c64;
+}
+body .first-block .background__title .background__title-text {
+  margin: 5% 10% 0 0;
+  font-size: 24px;
+  font-family: OpenSans-Italic;
+  color: #686663;
+}
+body .first-block .bottom-shape {
+  position: relative;
+  top: 100vh;
+  z-index: -1;
+  width: 100%;
+}
