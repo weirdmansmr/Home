@@ -205,8 +205,8 @@ body {
   .third-block {
     display: grid;
     grid: 
-    [row1-start] "top-left top-right" 50vh [row1-end]
-    [row2-start] "bot-left bot-right" 50vh [row2-end]
+    [row1-start] "top-left top-right" 50vw [row1-end]
+    [row2-start] "bot-left bot-right" 50vw [row2-end]
     /50% 50%;
   }
   .container1 {
@@ -216,9 +216,75 @@ body {
   }
   .container2 {
     grid-area: top-right;
+    background-color: #7f7770;
+    .cont2__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 15% 0 40px;
+      height: 50vw;
+      .cont2__main-text {
+        color: #ffffff;
+        font-family: OpenSans-Bold;
+        font-size: 34px;
+        margin: 0;
+      }
+      .cont2__text {
+        color: #ffffff;
+        font-family: OpenSans;
+        font-size: 16px;
+        margin: 30px 0 40px;
+      }
+      .cont2__button {
+        width: max-content;
+      letter-spacing: 4px;
+      font-size: 22px;
+      font-family: OpenSans-Bold;
+      background-color: #e2a355;
+      border-radius: 30px;
+      display: block;
+      border: 0;
+      text-decoration: none;
+      padding: 12px 40px;
+      color: #ffffff;
+      }
+    }
   }
   .container3 {
     grid-area: bot-left;
+    background-color: #deb37e;
+    .cont3__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 40px 0 15%;
+      height: 50vw;
+      .cont3__main-text {
+        color: #ffffff;
+        font-family: OpenSans-Bold;
+        font-size: 34px;
+        margin: 0;
+      }
+      .cont3__text {
+        color: #ffffff;
+        font-family: OpenSans;
+        font-size: 16px;
+        margin: 30px 0 40px;
+      }
+      .cont3__button {
+        width: max-content;
+      letter-spacing: 4px;
+      font-size: 16px;
+      font-family: OpenSans-Bold;
+      background-color: #e2a355;
+      border-radius: 30px;
+      display: block;
+      border: 0;
+      text-decoration: none;
+      padding: 12px 40px;
+      color: #ffffff;
+      }
+    }
   }
   .container4 {
     grid-area: bot-right;
