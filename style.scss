@@ -23,6 +23,16 @@
   src: url(../fonts/OpenSans-Italic.ttf);
 }
 
+@font-face {
+  font-family: OpenSans-SemiBold;
+  src: url(../fonts/OpenSans-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans-ExtraBoldItalic;
+  src: url(../fonts/OpenSans-ExtraBoldItalic.ttf);
+}
+
 body {
   margin: 0;
 
@@ -69,7 +79,6 @@ body {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    
     .top-shape {
       position: absolute;
       z-index: 2;
@@ -205,90 +214,244 @@ body {
   .third-block {
     display: grid;
     grid: 
-    [row1-start] "top-left top-right" 50vw [row1-end]
-    [row2-start] "bot-left bot-right" 50vw [row2-end]
+    [row1-start] "top-left top-right" 100vh [row1-end]
+    [row2-start] "bot-left bot-right" 100vh [row2-end]
     /50% 50%;
+    .container1 {
+      grid-area: top-left;
+      background-image: url(../images/Block-3-1.png);
+      background-size: cover;
+    }
+    .container2 {
+      grid-area: top-right;
+      background-color: #7f7770;
+      .cont2__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 15% 0 40px;
+        height: 100vh;
+        .cont2__main-text {
+          color: #ffffff;
+          font-family: OpenSans-Bold;
+          font-size: 34px;
+          margin: 0;
+        }
+        .cont2__text {
+          color: #ffffff;
+          font-family: OpenSans;
+          font-size: 16px;
+          margin: 30px 0 40px;
+        }
+        .cont2__button {
+          width: max-content;
+          letter-spacing: 4px;
+          font-size: 22px;
+          font-family: OpenSans-Bold;
+          background-color: #e2a355;
+          border-radius: 30px;
+          display: block;
+          border: 0;
+          text-decoration: none;
+          padding: 12px 40px;
+          color: #ffffff;
+        }
+      }
+    }
+    .container3 {
+      grid-area: bot-left;
+      background-color: #deb37e;
+      .cont3__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 40px 0 15%;
+        height: 100vh;
+        .cont3__main-text {
+          color: #ffffff;
+          font-family: OpenSans-Bold;
+          font-size: 34px;
+          margin: 0;
+        }
+        .cont3__text {
+          color: #ffffff;
+          font-family: OpenSans;
+          font-size: 16px;
+          margin: 30px 0 40px;
+        }
+        .cont3__button {
+          width: max-content;
+          letter-spacing: 4px;
+          font-size: 16px;
+          font-family: OpenSans-Bold;
+          background-color: #e2a355;
+          border-radius: 30px;
+          display: block;
+          border: 0;
+          text-decoration: none;
+          padding: 12px 40px;
+          color: #ffffff;
+        }
+      }
+    }
+    .container4 {
+      grid-area: bot-right;
+      background-image: url(../images/Block-3-2.png);
+      background-size: cover;
+    }
   }
-  .container1 {
-    grid-area: top-left;
-    background-image: url(../images/Block-3-1.png);
-    background-size: cover;
-  }
-  .container2 {
-    grid-area: top-right;
-    background-color: #7f7770;
-    .cont2__content {
+
+  .fourth-block {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    background-color: #99928d;
+    background-image: url(../images/Shadow.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position-y: 40%;
+    .fourth-block__top-shape {
+      position: absolute;
+      z-index: 2;
+      top: 0%;
+      width: 100%;
+      height: 30%;
+      background-image: url(../images/Shape.png);
+      background-repeat: repeat-x;
+      background-position: top;
+    }
+    .fourth-block__bottom-shape {
+      position: absolute;
+      z-index: 2;
+      bottom: 0%;
+      width: 100%;
+      background-image: url(../images/Shape-bottom.png);
+      background-repeat: repeat-x;
+      background-position: bottom;
+      height: 30%;
+    }
+    .fourth-block__text-block {
+      height: 90vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: 0 15% 0 40px;
-      height: 50vw;
-      .cont2__main-text {
+      align-items: center;
+      margin: 0 25%;
+      .text-block__title {
+        font-family: OpenSans-SemiBold;
+        font-size: 56px;
         color: #ffffff;
-        font-family: OpenSans-Bold;
-        font-size: 34px;
-        margin: 0;
+        margin: 30px 0;
       }
-      .cont2__text {
-        color: #ffffff;
+      .text-block__text {
         font-family: OpenSans;
-        font-size: 16px;
-        margin: 30px 0 40px;
-      }
-      .cont2__button {
-        width: max-content;
-      letter-spacing: 4px;
-      font-size: 22px;
-      font-family: OpenSans-Bold;
-      background-color: #e2a355;
-      border-radius: 30px;
-      display: block;
-      border: 0;
-      text-decoration: none;
-      padding: 12px 40px;
-      color: #ffffff;
+        font-weight: 100;
+        color: #dbdbdb;
+        text-align: center;
+        font-size: 24px;
+        margin: 0;
       }
     }
   }
-  .container3 {
-    grid-area: bot-left;
-    background-color: #deb37e;
-    .cont3__content {
+
+  .fifth-block {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../images/Hiking-woman.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .fifth-block__top-shape {
+      position: absolute;
+      z-index: 2;
+      top: -10%;
+      width: 100%;
+      height: 30%;
+      background-image: url(../images/Shape.png);
+      background-repeat: repeat-x;
+      background-position: top;
+    }
+    .fifth-block__bottom-shape {
+      position: absolute;
+      z-index: 2;
+      bottom: -10%;
+      width: 100%;
+      background-image: url(../images/Shape-bottom.png);
+      background-repeat: repeat-x;
+      background-position: bottom;
+      height: 30%;
+    }
+    .fifth-block__content {
+      height: 100vh;
       display: flex;
+      font-family: OpenSans-ExtraBoldItalic;
+      color: #deb37e;
       flex-direction: column;
       justify-content: center;
-      margin: 0 40px 0 15%;
-      height: 50vw;
-      .cont3__main-text {
-        color: #ffffff;
-        font-family: OpenSans-Bold;
-        font-size: 34px;
-        margin: 0;
-      }
-      .cont3__text {
-        color: #ffffff;
-        font-family: OpenSans;
-        font-size: 16px;
-        margin: 30px 0 40px;
-      }
-      .cont3__button {
-        width: max-content;
-      letter-spacing: 4px;
-      font-size: 16px;
-      font-family: OpenSans-Bold;
-      background-color: #e2a355;
-      border-radius: 30px;
-      display: block;
-      border: 0;
-      text-decoration: none;
-      padding: 12px 40px;
-      color: #ffffff;
+      align-items: flex-end;
+      text-shadow: 3px -4px 3px #b1b0ac;
+      font-size: 52px;
+      text-align: right;
+      margin-right: 100px;
+      .fifth-block__brown {
+        color: #54524f;
+        display: block;
       }
     }
   }
-  .container4 {
-    grid-area: bot-right;
-    background-image: url(../images/Block-3-2.png);
-    background-size: cover;
+
+  .sixth-block {
+    position: relative;
+    height: 100vh;
+    
+    .sixth-block__text-rows {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 10vh 0 20vh 0;
+      .text-rows__row1 { width: 400px; }
+      .text-rows__row2 { width: 400px; }
+      .text-rows__row3 { width: 400px; }
+      .text-rows__main-text {
+        font-family: OpenSans-Bold;
+        color: #e2a355;
+        font-size: 28px;
+        margin: 0;
+      }
+      .text-rows__common-text {
+        font-family: OpenSans;
+        color: #333d42;
+        font-size: 16px;
+      }
+    }
+    .sixth-block__black-text {
+      color: #3f3f3f;
+      text-align: center;
+      margin: 0 20%;
+      .black-text__quotes {
+        font-family: OpenSans-Bold;
+        font-size: 80px;
+        margin: 0;
+      }
+      .black-text__text {
+        font-family: OpenSans-SemiBold;
+        font-size: 26px;
+        margin: 0;
+      }
+      .black-text__cite {
+        font-family: OpenSans-Bold;
+        margin: 50px 0;
+      }
+    }
+    .sixth-block__bottom-shape {
+      position: absolute;
+      z-index: 2;
+      bottom: -10%;
+      width: 100%;
+      background-image: url(../images/Shape.png);
+      background-repeat: repeat-x;
+      background-position: bottom;
+      height: 30%;
+    }
   }
 }
