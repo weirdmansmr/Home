@@ -65,6 +65,9 @@ body {
         display: flex;
         border-radius: 25px;
         align-self: center;
+        input {
+          font-family: OpenSans;
+        }
         .search__text-field {
           outline: none;
           border: 0;

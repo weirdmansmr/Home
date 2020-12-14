@@ -60,6 +60,9 @@ body .head .navigate .search {
   border-radius: 25px;
   align-self: center;
 }
+body .head .navigate .search input {
+  font-family: OpenSans;
+}
 body .head .navigate .search .search__text-field {
   outline: none;
   border: 0;
