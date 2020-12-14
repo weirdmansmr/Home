@@ -33,6 +33,11 @@
   src: url(../fonts/OpenSans-ExtraBoldItalic.ttf);
 }
 
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
 body {
   margin: 0;
 
@@ -55,11 +60,11 @@ body {
       }
       .search {
         background-color: #c3bfbc;
-          padding: 10px;
-          text-align: center;
-          display: flex;
-          border-radius: 25px;
-          align-self: center;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        border-radius: 25px;
+        align-self: center;
         .search__text-field {
           outline: none;
           border: 0;
@@ -221,6 +226,7 @@ body {
       grid-area: top-left;
       background-image: url(../images/Block-3-1.png);
       background-size: cover;
+      background-position: center;
     }
     .container2 {
       grid-area: top-right;
@@ -298,12 +304,13 @@ body {
       grid-area: bot-right;
       background-image: url(../images/Block-3-2.png);
       background-size: cover;
+      background-position: center;
     }
   }
 
   .fourth-block {
     position: relative;
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     background-color: #99928d;
     background-image: url(../images/Shadow.png);
@@ -342,6 +349,7 @@ body {
         font-size: 56px;
         color: #ffffff;
         margin: 30px 0;
+        text-align: center;
       }
       .text-block__text {
         font-family: OpenSans;
@@ -403,9 +411,22 @@ body {
 
   .sixth-block {
     position: relative;
-    height: 100vh;
-    
+    height: 80vh;
+    z-index: 3;
+    .sixth-block__shadow {
+      position: absolute;
+      height: 80vh;
+      width: 100%;
+      background-image: url(../images/Right-shadow.png);
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position-y: 100%;
+      background-position-x: right;
+      z-index: 2;
+    }
     .sixth-block__text-rows {
+      position: inherit;
+      z-index: 3;
       display: flex;
       justify-content: space-evenly;
       margin: 10vh 0 20vh 0;
@@ -419,15 +440,19 @@ body {
         margin: 0;
       }
       .text-rows__common-text {
+        position: inherit;
+        z-index: 3;
         font-family: OpenSans;
         color: #333d42;
         font-size: 16px;
       }
     }
     .sixth-block__black-text {
+      position: inherit;
+      z-index: 3;
       color: #3f3f3f;
       text-align: center;
-      margin: 0 20%;
+      margin: 0 25%;
       .black-text__quotes {
         font-family: OpenSans-Bold;
         font-size: 80px;
@@ -441,17 +466,135 @@ body {
       .black-text__cite {
         font-family: OpenSans-Bold;
         margin: 50px 0;
+        font-size: 20px;
       }
     }
     .sixth-block__bottom-shape {
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       bottom: -10%;
       width: 100%;
       background-image: url(../images/Shape.png);
       background-repeat: repeat-x;
       background-position: bottom;
       height: 30%;
+    }
+  }
+
+  .seventh-block {
+    position: relative;
+    
+    background-color: #deb37e;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0 20%;
+    .seventh-block__title {
+      font-family: OpenSans-Bold;
+      color: #ffffff;
+      font-size: 52px;
+    }
+    .seventh-block__text {
+      font-family: OpenSans;
+      color: #54524f;
+      font-size: 24px;
+      text-align: center;
+    }
+    .seventh-block__email {
+      background-color: #ffffff;
+      padding: 0 0 0 30px;
+      text-align: center;
+      display: flex;
+      border-radius: 30.5px;
+      align-self: center;
+      width: 750px;
+      input {
+        font-family: OpenSans;
+      }
+      .email__text-field {
+        font-size: 24px;
+        outline: none;
+        border: 0;
+        background-color: #ffffff;
+        color: #54524f;
+        width: 750px;  
+      }
+      .email__button {
+        width: max-content;
+        text-decoration: none;
+        font-size: 24px;
+        font-family: OpenSans-Bold;
+        background-color: #54524f;
+        border-radius: 30.5px;
+        display: block;
+        border: 0;
+        padding: 14px 25px;
+        color: white;
+      }
+    }
+    .seventh-block__bottom-shape {
+      position: absolute;
+      z-index: 2;
+      bottom: -20%;
+      width: 100%;
+      background-image: url(../images/Middle-shape.png);
+      background-repeat: repeat-x;
+      background-position: bottom;
+      height: 40%;
+    }
+  }
+
+  .last-block {
+    background-size: 100% 100%;
+    background-color: #7f7770;
+    font-family: Montserrat-Regular;
+    display: grid;
+    grid: [row1-start] "col1 col2 col3 col4" 80vh [row1-end]
+    / 4fr 1fr 1fr 1fr;
+    color: #ffffff;
+    .column1 {
+      margin: 40vh 20% 15vh 20%;
+      
+      .col1__icons {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        margin: 20px 0;
+      }
+      .col1__title {
+        font-size: 22px;
+        margin: 0 0 30px 0;
+      }
+      .col1__text {
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+    .column2 {
+      margin: 40vh 0 15vh 0;
+    }
+    .column3 {
+      margin: 40vh 0 15vh 0;
+    }
+    .column4 {
+      margin: 40vh 0 15vh 0;
+    }
+    .bot__title {
+      font-size: 22px;
+      margin: 0;
+      margin: 0 0 30px 0;
+    }
+    .bot__list {
+      list-style: none;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      & > li {
+        margin: 0 0 10px 0;
+      }
     }
   }
 }
